@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* ============================================
+   WorkmanWise Theme System
+   5 themes via CSS custom properties
+   ============================================ */
+
+/* Default: Shop Floor */
+:root {
+  --color-bg: #1a1a1a;
+  --color-surface: #242424;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+  --color-border: #333333;
+  --color-card-bg: #1f1f1f;
+}
+
+[data-theme="blueprint"] {
+  --color-bg: #0A1628;
+  --color-surface: #111D32;
+  --color-text-primary: #E2E8F0;
+  --color-text-secondary: #8BA2C4;
+  --color-accent: #67E8F9;
+  --color-accent-hover: #22D3EE;
+  --color-border: #1E3A5F;
+  --color-card-bg: #0F2340;
+}
+
+[data-theme="clean-room"] {
+  --color-bg: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-accent: #2563EB;
+  --color-accent-hover: #1D4ED8;
+  --color-border: #E2E8F0;
+  --color-card-bg: #F1F5F9;
+}
+
+[data-theme="raw-material"] {
+  --color-bg: #FAF5F0;
+  --color-surface: #F5EDE4;
+  --color-text-primary: #1C1917;
+  --color-text-secondary: #78716C;
+  --color-accent: #B45309;
+  --color-accent-hover: #92400E;
+  --color-border: #E7DDD0;
+  --color-card-bg: #F0E8DE;
+}
+
+[data-theme="night-shift"] {
+  --color-bg: #000000;
+  --color-surface: #0A0A0A;
+  --color-text-primary: #E2E8F0;
+  --color-text-secondary: #6B7280;
+  --color-accent: #22C55E;
+  --color-accent-hover: #16A34A;
+  --color-border: #1A1A1A;
+  --color-card-bg: #0D0D0D;
+}
+
+/* ============================================
+   Tailwind v4 Theme Inline — maps CSS vars
+   to Tailwind utility classes
+   ============================================ */
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-border: var(--color-border);
+  --color-card-bg: var(--color-card-bg);
+
+  --font-heading: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+/* Disable all animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   Scrollbar (subtle, themed)
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
