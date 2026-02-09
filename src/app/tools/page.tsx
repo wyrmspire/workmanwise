@@ -1,10 +1,12 @@
-import { Container } from "@/components/layout/Container";
+import type { Metadata } from 'next';
+import { ToolsCatalog } from '@/components/tools/ToolsCatalog';
 
-export default function Page() {
-  return (
-    <Container className="py-24">
-      <h1 className="text-3xl font-bold text-text-primary">Tools</h1>
-      <p className="text-text-secondary mt-4">Coming soon.</p>
-    </Container>
-  );
+export const metadata: Metadata = {
+  title: 'Tools & Services | WorkmanWise',
+  description:
+    'Focused tools for real work. Browse product families by family, role, or type.',
+};
+
+export default function ToolsPage() {
+  return <ToolsCatalog />;
 }

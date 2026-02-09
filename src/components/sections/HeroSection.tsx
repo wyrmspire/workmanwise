@@ -19,7 +19,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, ease: ANIMATION.easing }}
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-tight mb-6"
           >
-            Most manufacturing problems aren't machine problems.
+            Most manufacturing problems aren&apos;t machine problems.
           </motion.h1>
 
           <motion.p
@@ -28,7 +28,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2, ease: ANIMATION.easing }}
             className="text-xl md:text-2xl text-text-secondary leading-relaxed mb-8"
           >
-            They're handoff problems.
+            They&apos;re handoff problems.
           </motion.p>
 
           <motion.div

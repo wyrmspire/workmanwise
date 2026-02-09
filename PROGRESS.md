@@ -14,11 +14,11 @@
 | 3 | Layout Shell (Header, Footer) | **Complete** | Header with nav, backdrop blur on scroll >50px, Footer, Container, responsive mobile menu |
 | 4 | Reusable UI Components | **Complete** | Button (3 variants), Card (expand/collapse), Badge (5 types), AnimateOnScroll (4 animations), SectionHeading, RoleCard |
 | 5 | Homepage Sections 1-4 | **Complete** | HeroSection (staggered fade-up), TranslationSection (ConveyorAnimation), OutcomeSection (GapFillAnimation), RoleSection (4 roles) |
-| 6 | Homepage Sections 5-9 | Not Started | Products, AI Explanation, Social Proof, Collective, CTA |
-| 7 | Product Data & Tools Page | Not Started | 9 families, filters, dynamic family pages |
-| 8 | Resources Page & Articles | Not Started | 5 lean/JIT articles, article cards, SEO metadata |
-| 9 | About, Contact & Polish | Not Started | About page, contact form + API, responsive, a11y |
-| 10 | Performance, SEO & Deployment | Not Started | Lighthouse 90+, Vercel deployment, cross-browser |
+| 6 | Homepage Sections 5-9 | **Complete** | Added Products, AI Explanation, Social Proof, Collective Identity, and Final CTA sections to homepage |
+| 7 | Product Data & Tools Page | **Complete** | Added shared product data (9 families, 37 tools), role/type/family filtering on `/tools`, and static `/tools/[family]` pages |
+| 8 | Resources Page & Articles | **Complete** | Added 5 lean/JIT-style resources with expandable article cards and metadata on `/resources` |
+| 9 | About, Contact & Polish | **Complete** | Added About page content, contact form with success animation, `/api/contact` handler, and responsive accessible layouts |
+| 10 | Performance, SEO & Deployment | In Progress | Added metadata, sitemap, robots, and static generation checks. Lighthouse audit and Vercel deployment still pending. |
 
 ---
 

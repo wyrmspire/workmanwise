@@ -14,7 +14,7 @@ export function OutcomeSection() {
         <div className="max-w-3xl mx-auto space-y-6 mb-12">
           <AnimateOnScroll delay={0.1}>
             <p className="text-text-secondary text-lg">
-              Manufacturing doesn't need disruption. It needs connection.
+              Manufacturing doesn&apos;t need disruption. It needs connection.
             </p>
           </AnimateOnScroll>
 

@@ -13,17 +13,28 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<ThemeName>(DEFAULT_THEME);
+  const [theme, setThemeState] = useState<ThemeName>(() => {
+    if (typeof window === 'undefined') {
+      return DEFAULT_THEME;
+    }
+
+    const stored = window.localStorage.getItem(
+      'workmanwise-theme',
+    ) as ThemeName | null;
+
+    return stored && themes[stored] ? stored : DEFAULT_THEME;
+  });
   const [mounted, setMounted] = useState(false);
 
-  // Load theme from localStorage on mount
+  // Mark mounted after hydration.
   useEffect(() => {
-    const stored = localStorage.getItem('workmanwise-theme') as ThemeName | null;
-    if (stored && themes[stored]) {
-      setThemeState(stored);
-      document.documentElement.setAttribute('data-theme', stored);
-    }
-    setMounted(true);
+    const frameId = window.requestAnimationFrame(() => {
+      setMounted(true);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   // Update document theme and localStorage
@@ -35,10 +46,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // Apply theme on changes (after mount)
   useEffect(() => {
-    if (mounted) {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-  }, [theme, mounted]);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, themes, mounted }}>
