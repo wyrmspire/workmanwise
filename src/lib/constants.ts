@@ -1,25 +1,18 @@
 export const SITE_NAME = 'WorkmanWise';
-export const SITE_TAGLINE = 'Keep decisions moving forward without friction.';
+export const SITE_TAGLINE = 'We build solutions that finish work.';
 export const SITE_DESCRIPTION =
-  'A collective of machinists and designers using AI to streamline CAM, posts, and shop workflows safely, predictably, and without hype.';
+  'Less talking. More finished work. WorkmanWise builds solutions that remove friction and keep decisions moving forward.';
 export const SITE_URL = 'https://workmanwise.com';
 export const SITE_KEYWORDS = [
-  'manufacturing workflows',
-  'CAM handoff',
-  'post processor',
-  'shop floor operations',
-  'lean manufacturing',
-  'just in time operations',
-  'process clarity',
-  'workflow intelligence',
+  'workflow solutions',
+  'process improvement',
+  'operational efficiency',
+  'business automation',
+  'workmanwise',
 ] as const;
 
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'Tools & Services', href: '/tools' },
-  { label: 'Resources', href: '/resources' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
 ] as const;
 
 export const ANIMATION = {

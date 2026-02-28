@@ -84,4 +84,4 @@ export const themeOrder: ThemeName[] = [
   'night-shift',
 ];
 
-export const DEFAULT_THEME: ThemeName = 'shop-floor';
+export const DEFAULT_THEME: ThemeName = 'clean-room';
