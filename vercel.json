@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/control",
+            "destination": "https://wwcomand.vercel.app",
+            "permanent": true
+        }
+    ]
+}
